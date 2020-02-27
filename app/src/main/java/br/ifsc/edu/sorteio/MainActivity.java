@@ -21,8 +21,10 @@ public class MainActivity extends AppCompatActivity {
         textViewResultado = findViewById(R.id.textViewResultado);
     }
     public void sortear(View view){
-        int inicial = Integer.parseInt(editTextInicial.getText().toString());
-        textViewResultado.setText(Integer.toString(inicial));
+        int Vinicial = Integer.parseInt(editTextInicial.getText().toString());
+        int Vfinal = Integer.parseInt(editTextFinal.getText().toString());
+        int resultado = (int) ((Math.random()*(Vfinal-Vinicial))+Vinicial);
+        textViewResultado.setText(Integer.toString(resultado));
 
 
     }
